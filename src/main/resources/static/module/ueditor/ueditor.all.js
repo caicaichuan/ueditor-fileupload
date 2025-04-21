@@ -23741,6 +23741,7 @@ UE.plugin.register('autoupload', function (){
                     loader.setAttribute('alt', data.original || '');
                     loader.removeAttribute('id');
                     domUtils.removeClasses(loader, 'loadingclass');
+	            me.execCommand('insertHtml', '');
                 }
             };
         } else {
@@ -24501,6 +24502,7 @@ UE.plugin.register('simpleupload', function (){
                             loader.setAttribute('alt', json.original || '');
                             loader.removeAttribute('id');
                             domUtils.removeClasses(loader, 'loadingclass');
+			    me.execCommand('insertHtml', '');
                         } else {
                             showErrorLoader && showErrorLoader(json.state);
                         }
